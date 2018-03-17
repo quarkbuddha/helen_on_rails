@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Gtd Queues</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @gtd_queues.each do |gtd_queue| %>
+      <tr>
+        <td><%= link_to gtd_queue.name, gtd_queue %></td>
+        <td><%= link_to 'Edit', edit_gtd_queue_path(gtd_queue) %></td>
+        <td><%= link_to 'Destroy', gtd_queue, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Queue', new_gtd_queue_path %>

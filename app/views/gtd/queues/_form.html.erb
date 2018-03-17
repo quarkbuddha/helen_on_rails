@@ -1,0 +1,20 @@
+<%= form_for(@gtd_queue) do |f| %>
+  ID: <%= @gtd_queue.id %><br/>
+  Name: <%= f.text_field :name %><br/>
+  Description: <%= f.text_area :description %><br/>
+  <% if @gtd_queue.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@gtd_queue.errors.count, "error") %> prohibited this gtd_queue from being saved:</h2>
+
+      <ul>
+      <% @gtd_queue.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

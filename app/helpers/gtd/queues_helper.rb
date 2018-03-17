@@ -1,0 +1,2 @@
+module Gtd::QueuesHelper
+end
