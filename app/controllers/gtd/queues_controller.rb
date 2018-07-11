@@ -4,7 +4,7 @@ class Gtd::QueuesController < ApplicationController
   # GET /gtd/queues
   # GET /gtd/queues.json
   def index
-    @gtd_queues = Gtd::Queue.all
+    @gtd_queues = Gtd::Queue.where(user: current_user.id)
   end
 
   # GET /gtd/queues/1
@@ -25,6 +25,7 @@ class Gtd::QueuesController < ApplicationController
   # POST /gtd/queues.json
   def create
     @gtd_queue = Gtd::Queue.new(gtd_queue_params)
+    @gtd_queue.user = current_user.id
 
     respond_to do |format|
       if @gtd_queue.save
