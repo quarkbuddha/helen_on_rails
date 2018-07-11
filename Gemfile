@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.8'
 # Use postgresql as the database for Active Record
@@ -22,6 +21,14 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
+
+gem 'devise'
+
+gem 'omniauth-oauth2' , '~> 1.3.1'
+gem 'omniauth'
+gem 'omniauth-facebook'
+gem 'omniauth-gplus'
+gem 'omniauth-linkedin'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
